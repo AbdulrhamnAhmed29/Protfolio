@@ -8,7 +8,7 @@ const projects = [
     title: "Admin Management System",
     category: "Full-Stack",
     description: "Premium Car Showroom platform featuring real-time inventory, Built for high-performance scale.",
-    image: "https://private-user-images.githubusercontent.com/208204345/551136100-8b5ad2b1-5538-4a35-9a32-c70b7e13d602.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzEzNjY5NzUsIm5iZiI6MTc3MTM2NjY3NSwicGF0aCI6Ii8yMDgyMDQzNDUvNTUxMTM2MTAwLThiNWFkMmIxLTU1MzgtNGEzNS05YTMyLWM3MGI3ZTEzZDYwMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwMjE3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDIxN1QyMjE3NTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mNjM3OGE2NjFiNTg1NDMzMWNhZDgxYjYwNDEyZjQ2OWQ5MDNhMGI0MTA3OTMwNzBjYjYyYTNiMDNhYWU4OGZmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.40EPZhTAfaNLmN9fYyu_arb_5EodRpxFaoII_N486zI",
+    image: "/hero.png",
     tags: ["React js", "Tailwind CSS", "React Query", "React Hook Form", "Modern UI"],
     demoUrl: "https://elvora-motors.vercel.app/",
     githubUrl: "https://github.com/AbdulrhamnAhmed29/Elvora-Motors",
