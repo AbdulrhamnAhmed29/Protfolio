@@ -13,14 +13,14 @@ export const HeroSection = () => {
     "",
     "const developer = new FrontEndDeveloper({",
     "  name: 'Abdulrhman',",
-    "  stack: ['React', 'Next.js', 'Node.js', 'TypeScript'],",
+    "  stack: ['React', 'React Query', 'React Hook Form', 'TypeScript'],",
     "  focus: 'Building scalable web applications',",
     "  status: 'Open to new opportunities'",
     "});",
     "",
     "await developer.launchPortfolio();",
-    "// Featured: E-commerce,  Startup MVPs",
-    "",
+   
+  
     "developer.connect();",
     "console.log(' Let's build something exceptional together!');"
   ];
