@@ -71,8 +71,10 @@ Car showcase platform with filtering system & admin dashboard.
 ## 🔥 What I'm Working On
 
 * Building advanced React projects
-* Learning CS fundamentals (CS50)
-* Improving problem solving skills
+* Learning Next js 
+*Learning Sql and data base schmea 
+*Learning Ai Automation 
+
 
 ---
 
