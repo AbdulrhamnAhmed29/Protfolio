@@ -55,16 +55,11 @@ Car showcase platform with filtering system & admin dashboard.
 
 ---
 
-## 📊 GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME\&show_icons=true\&theme=radical)
-
----
 
 ## 📫 Contact Me
 
-* 💼 LinkedIn: *Add your link*
-* 📧 Email: *[your@email.com](mailto:your@email.com)*
+* 💼 LinkedIn: *https://www.linkedin.com/in/abdulrhman-aahmed-828a94354/*
+* 📧 Email: *abdulrhmanaahmed4@gmail.com*
 
 ---
 
