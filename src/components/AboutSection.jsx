@@ -59,7 +59,7 @@ console.log(counter);
   // Programmatic download function  cvs
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/cv/MyCv.pdf'; 
+    link.href = '/cv/cv.pdf'; // Path to your resume file
     link.download = 'Abdulrhman-resume.pdf';
     document.body.appendChild(link);
     link.click();

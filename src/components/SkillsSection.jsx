@@ -10,6 +10,10 @@ import reactIcon from "@/assets/icons/react.png";
 import gitIcon from "@/assets/icons/git.png";
 import githubIcon from "@/assets/icons/github.png";
 import vscodeIcon from "@/assets/icons/vscode.png";
+import postmanIcon from "@/assets/icons/postman.png";
+import strapiIcon from "@/assets/icons/strapi.png";
+
+
 
 const skills = [
   // Frontend
@@ -22,13 +26,22 @@ const skills = [
   // Tools
   { name: "Git", level: 90, category: "tools", icon: "git" },
   { name: "GitHub", level: 90, category: "tools", icon: "github" },
-  { name: "VS Code", level: 95, category: "tools", icon: "vscode" },
+  { name: "Postman", level: 95, category: "tools", icon: "postman" },
+  { name: "GitHub Copilot", level: 95, category: "tools", icon: "github" },
+
+
+  { name: "strapi", level: 95, category: "Headless Cms", icon: "strapi" },
+
+
+
 ];
 
 const categories = [
   { id: "all", label: "All Skills", color: "bg-gradient-to-r from-purple-500 to-pink-500" },
   { id: "frontend", label: "Frontend", color: "bg-gradient-to-r from-blue-500 to-cyan-500" },
   { id: "tools", label: "Tools", color: "bg-gradient-to-r from-orange-500 to-yellow-500" },
+  { id: "Headless Cms", label: "Headless Cms", color: "bg-gradient-to-r from-orange-500 to-yellow-500" },
+
 ];
 
 const iconImages = {
@@ -40,6 +53,8 @@ const iconImages = {
   git: gitIcon,
   github: githubIcon,
   vscode: vscodeIcon,
+  postman: postmanIcon,
+  strapi: strapiIcon,
 };
 
 const SkillBar = ({ level }) => (
@@ -48,18 +63,17 @@ const SkillBar = ({ level }) => (
       initial={{ width: 0 }}
       animate={{ width: `${level}%` }}
       transition={{ duration: 1.5, delay: 0.2 }}
-      className={`h-full rounded-full ${
-        level > 75 ? 'bg-gradient-to-r from-green-400 to-emerald-500' : 
-        level > 50 ? 'bg-gradient-to-r from-yellow-400 to-amber-500' : 
-        'bg-gradient-to-r from-red-400 to-pink-500'
-      }`}
+      className={`h-full rounded-full ${level > 75 ? 'bg-gradient-to-r from-green-400 to-emerald-500' :
+        level > 50 ? 'bg-gradient-to-r from-yellow-400 to-amber-500' :
+          'bg-gradient-to-r from-red-400 to-pink-500'
+        }`}
     />
   </div>
 );
 
 const InfiniteScrollSkills = ({ skills }) => {
   const duplicatedSkills = [...skills, ...skills, ...skills];
-  
+
   return (
     <div className="overflow-hidden py-8">
       <motion.div
@@ -76,7 +90,7 @@ const InfiniteScrollSkills = ({ skills }) => {
           </div>
         ))}
       </motion.div>
-      
+
       <motion.div
         className="flex gap-8"
         animate={{ x: ["-100%", "0%"] }}
@@ -97,14 +111,14 @@ const InfiniteScrollSkills = ({ skills }) => {
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
-  const filteredSkills = skills.filter(skill => 
+  const filteredSkills = skills.filter(skill =>
     activeCategory === "all" || skill.category === activeCategory
   );
 
   return (
     <section id="skills" className="py-28 px-4 bg-gradient-to-br from-background via-secondary/5 to-background">
       <div className="container mx-auto max-w-6xl">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-20"
@@ -122,11 +136,10 @@ export const SkillsSection = () => {
             <motion.button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-6 py-2.5 rounded-full font-medium border border-transparent hover:shadow-lg ${
-                activeCategory === category.id
-                  ? `${category.color} text-white shadow-md`
-                  : "bg-secondary/50 text-foreground hover:bg-secondary/70"
-              }`}
+              className={`px-6 py-2.5 rounded-full font-medium border border-transparent hover:shadow-lg ${activeCategory === category.id
+                ? `${category.color} text-white shadow-md`
+                : "bg-secondary/50 text-foreground hover:bg-secondary/70"
+                }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -158,11 +171,10 @@ export const SkillsSection = () => {
                         <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
                           {skill.name}
                         </h3>
-                        <span className={`text-sm font-medium px-2 py-1 rounded-full ${
-                          skill.level > 75 ? 'bg-emerald-500/10 text-emerald-500' : 
-                          skill.level > 50 ? 'bg-amber-500/10 text-amber-500' : 
-                          'bg-pink-500/10 text-pink-500'
-                        }`}>
+                        <span className={`text-sm font-medium px-2 py-1 rounded-full ${skill.level > 75 ? 'bg-emerald-500/10 text-emerald-500' :
+                          skill.level > 50 ? 'bg-amber-500/10 text-amber-500' :
+                            'bg-pink-500/10 text-pink-500'
+                          }`}>
                           {skill.level}%
                         </span>
                       </div>

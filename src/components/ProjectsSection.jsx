@@ -3,27 +3,44 @@ import { useState, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const projects = [
-  {
+ {
     id: 8,
-    title: "Admin Management System",
+    title: "ELVORA MOTORS — Luxury Car Management System", // اختصار الاسم ليكون أشيك
     category: "Full-Stack",
-    description: "Premium Car Showroom platform featuring real-time inventory, Built for high-performance scale.",
     image: "/hero.png",
-    tags: ["React js", "Tailwind CSS", "React Query", "React Hook Form", "Modern UI"],
+    tags: ["React", "Laravel", "React Query", "Axios"], // أهم 4 تقنيات فقط
     demoUrl: "https://elvora-motors.vercel.app/",
     githubUrl: "https://github.com/AbdulrhamnAhmed29/Elvora-Motors",
     featured: true,
     accentColor: "from-blue-600 to-indigo-700", 
-    status: "Production",
+    status: "Live", // كلمة Live أصغر وأسرع في القراءة
     highlights: [
-      "Advanced Axios Logic (Interceptors & Instances)",
-      "Performance: Lazy Loading & Skeleton UI",
-      "Full Admin Dashboard (CRUD & User Management)",
-      "Data Tools: Search, Pagination & Excel Export",
-      "Robust Global Error Handling"
+      "Admin Dashboard (CRUD)",
+      "Axios Interceptors",
+      "Skeleton UI & Lazy Loading",
+      "Excel Data Export"
     ]
   },
-
+ {
+    id: 9, // ترتيبه بعد Elvora
+    title: "SOUL KITCHEN — Modern Restaurant & E-Commerce Platform",
+    category: "Full-Stack",
+    description: "Premium e-commerce & reservation system with a Dark Luxury aesthetic.",
+    image: "soul.png", // اتأكد من المسار
+    tags: ["React", "Strapi CMS" , "React Query"],
+    demoUrl: "https://soul-kitchen-demo.vercel.app/", // ضيف اللينك بتاعك هنا
+    githubUrl: "https://github.com/AbdulrhamnAhmed29/SoulKitchen",
+    featured: true,
+    accentColor: "from-orange-500 to-red-700", // ألوان بتليق مع الـ Kitchen/Food
+    status: "Live",
+    highlights: [
+      "Feature-Based Architecture (FBA)",
+      "Persistent Cart & PDF Receipts",
+      "Table Reservation System",
+      "Headless CMS Integration (Strapi)",
+      "Server-Side Sorting & Filtering"
+    ]
+  },
 
 ];
 
@@ -250,25 +267,14 @@ export const ProjectsSection = () => {
                       <h3 className="text-xl font-bold text-foreground">
                         {project.title}
                       </h3>
-                      {project.featured && (
-                        <motion.div
-                          className="flex items-center gap-1 px-2 py-1 rounded-full bg-amber-500/20 text-amber-600 text-xs font-medium border border-amber-500/30"
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: index * 0.1 + 0.3 }}
-                        >
-                          <Star size={12} className="fill-amber-500" />
-                          Featured
-                        </motion.div>
-                      )}
+                     
                     </div>
 
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed flex-1">
-                      {project.description}
-                    </p>
+                    <hr />
 
+                  
                     {/* Key Features */}
-                    <div className="mb-4">
+                    <div className="mb-4 mt-2">
                       <ProjectHighlights highlights={project.highlights} />
                     </div>
 

@@ -4,7 +4,7 @@ import {
   User,
   Code,
   Briefcase,
-  MessageSquare,
+
   Mail,
   Sun,
   Moon,

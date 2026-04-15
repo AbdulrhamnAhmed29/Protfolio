@@ -13,7 +13,7 @@ export const HeroSection = () => {
     "",
     "const developer = new FrontEndDeveloper({",
     "  name: 'Abdulrhman',",
-    "  stack: ['React', 'React Query', 'React Hook Form', 'TypeScript'],",
+    "  stack: ['React', 'React Query', 'React Hook Form', 'TypeScript' , 'strapi' ],",
     "  focus: 'Building scalable web applications',",
     "  status: 'Open to new opportunities'",
     "});",
@@ -54,7 +54,7 @@ export const HeroSection = () => {
   // -------------------
   const handleViewResume = () => {
     // Open resume in new tab
-    window.open('/cv/MyCv.pdf', '_blank', 'noopener,noreferrer');
+    window.open('/cv/cv.pdf', '_blank', 'noopener,noreferrer');
   };
 
   return (
