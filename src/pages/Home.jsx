@@ -9,6 +9,8 @@ import { Footer } from "../components/Footer";
 import { CertificationSection } from "../components/CertificationSection";
 
 export const Home = () => {
+  const cv = "/cv/Abdulrhman Frontend (React).pdf";
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* Theme Toggle */}
@@ -19,8 +21,12 @@ export const Home = () => {
       <Navbar />
       {/* Main Content */}
       <main>
-        <HeroSection />
-        <AboutSection />
+        <HeroSection
+          cv={cv}
+        />
+        <AboutSection
+          cv={cv}
+        />
         <SkillsSection />
         <ProjectsSection />
         <CertificationSection />

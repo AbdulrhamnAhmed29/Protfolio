@@ -3,32 +3,14 @@ import { useState, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 const projects = [
- {
-    id: 8,
-    title: "ELVORA MOTORS — Luxury Car Management System", // اختصار الاسم ليكون أشيك
-    category: "Full-Stack",
-    image: "/hero.png",
-    tags: ["React", "Laravel", "React Query", "Axios"], // أهم 4 تقنيات فقط
-    demoUrl: "https://elvora-motors.vercel.app/",
-    githubUrl: "https://github.com/AbdulrhamnAhmed29/Elvora-Motors",
-    featured: true,
-    accentColor: "from-blue-600 to-indigo-700", 
-    status: "Live", // كلمة Live أصغر وأسرع في القراءة
-    highlights: [
-      "Admin Dashboard (CRUD)",
-      "Axios Interceptors",
-      "Skeleton UI & Lazy Loading",
-      "Excel Data Export"
-    ]
-  },
- {
-    id: 9, // ترتيبه بعد Elvora
+  {
+    id: 8, // ترتيبه بعد Elvora
     title: "SOUL KITCHEN — Modern Restaurant & E-Commerce Platform",
     category: "Full-Stack",
     description: "Premium e-commerce & reservation system with a Dark Luxury aesthetic.",
     image: "soul.png", // اتأكد من المسار
-    tags: ["React", "Strapi CMS" , "React Query"],
-    demoUrl: "https://soul-kitchen-demo.vercel.app/", // ضيف اللينك بتاعك هنا
+    tags: ["React", "Strapi CMS", "React Query"],
+    demoUrl: "https://www.linkedin.com/posts/abdulrhman-ahmed-828a94354_1-tech-stack-frontend-reactjs-state-activity-7450832890390773760-qq3X?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFhv8KABTsBZjYjQMqSLp3OUZIXqDCmBHU4", // ضيف اللينك بتاعك هنا
     githubUrl: "https://github.com/AbdulrhamnAhmed29/SoulKitchen",
     featured: true,
     accentColor: "from-orange-500 to-red-700", // ألوان بتليق مع الـ Kitchen/Food
@@ -41,6 +23,25 @@ const projects = [
       "Server-Side Sorting & Filtering"
     ]
   },
+  {
+    id: 9,
+    title: "ELVORA MOTORS — Luxury Car Management System", // اختصار الاسم ليكون أشيك
+    category: "Full-Stack",
+    image: "/hero.png",
+    tags: ["React", "Laravel", "React Query", "Axios"], // أهم 4 تقنيات فقط
+    demoUrl: "https://www.linkedin.com/posts/abdulrhman-ahmed-828a94354_fullstack-laravel-reactjs-activity-7426530080493043713-znKj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFhv8KABTsBZjYjQMqSLp3OUZIXqDCmBHU4",
+    githubUrl: "https://github.com/AbdulrhamnAhmed29/Elvora-Motors",
+    featured: true,
+    accentColor: "from-blue-600 to-indigo-700",
+    status: "Live", // كلمة Live أصغر وأسرع في القراءة
+    highlights: [
+      "Admin Dashboard (CRUD)",
+      "Axios Interceptors",
+      "Skeleton UI & Lazy Loading",
+      "Excel Data Export"
+    ]
+  },
+
 
 ];
 
@@ -177,8 +178,8 @@ export const ProjectsSection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 border ${activeFilter === category
-                    ? "bg-primary text-primary-foreground border-primary"
-                    : "bg-background text-muted-foreground border-border hover:border-primary hover:text-primary"
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-background text-muted-foreground border-border hover:border-primary hover:text-primary"
                   }`}
               >
                 {category}
@@ -221,8 +222,8 @@ export const ProjectsSection = () => {
                     {/* Status Badge */}
                     <div className="absolute top-3 right-3">
                       <div className={`px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm ${project.status === "Live"
-                          ? "bg-emerald-500/20 text-emerald-600 border border-emerald-500/30"
-                          : "bg-amber-500/20 text-amber-600 border border-amber-500/30"
+                        ? "bg-emerald-500/20 text-emerald-600 border border-emerald-500/30"
+                        : "bg-amber-500/20 text-amber-600 border border-amber-500/30"
                         }`}>
                         {project.status}
                       </div>
@@ -241,7 +242,7 @@ export const ProjectsSection = () => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: hoveredProject === project.id ? 1 : 0 }}
                     >
-                   
+
 
                       {/* Code Button */}
                       <motion.a
@@ -251,8 +252,8 @@ export const ProjectsSection = () => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         className={`p-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${project.githubUrl === "#"
-                            ? "bg-gray-500/50 text-gray-300 border-gray-500/30 cursor-not-allowed"
-                            : "bg-white/20 text-white border-white/30 hover:bg-white/30"
+                          ? "bg-gray-500/50 text-gray-300 border-gray-500/30 cursor-not-allowed"
+                          : "bg-white/20 text-white border-white/30 hover:bg-white/30"
                           }`}
                         onClick={(e) => project.githubUrl === "#" && e.preventDefault()}
                       >
@@ -267,12 +268,12 @@ export const ProjectsSection = () => {
                       <h3 className="text-xl font-bold text-foreground">
                         {project.title}
                       </h3>
-                     
+
                     </div>
 
                     <hr />
 
-                  
+
                     {/* Key Features */}
                     <div className="mb-4 mt-2">
                       <ProjectHighlights highlights={project.highlights} />
@@ -302,13 +303,13 @@ export const ProjectsSection = () => {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         className={`flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${project.demoUrl === "#"
-                            ? "bg-muted text-muted-foreground cursor-not-allowed border border-border"
-                            : "bg-primary text-primary-foreground hover:bg-primary/90"
+                          ? "bg-muted text-muted-foreground cursor-not-allowed border border-border"
+                          : "bg-primary text-primary-foreground hover:bg-primary/90"
                           }`}
                         onClick={(e) => project.demoUrl === "#" && e.preventDefault()}
                       >
                         <Eye size={16} />
-                        {project.demoUrl === "#" ? "Coming Soon" : "Live Demo"}
+                        {project.demoUrl === "#" ? "Coming Soon" : "Watch Video"}
                       </motion.a>
 
                       <motion.a
@@ -318,8 +319,8 @@ export const ProjectsSection = () => {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         className={`inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium border transition-all duration-300 ${project.githubUrl === "#"
-                            ? "bg-muted text-muted-foreground cursor-not-allowed border-border"
-                            : "bg-background text-foreground border-border hover:border-primary hover:bg-primary/5"
+                          ? "bg-muted text-muted-foreground cursor-not-allowed border-border"
+                          : "bg-background text-foreground border-border hover:border-primary hover:bg-primary/5"
                           }`}
                         onClick={(e) => project.githubUrl === "#" && e.preventDefault()}
                       >
@@ -351,8 +352,8 @@ export const ProjectsSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-medium transition-all duration-300 ${showAll
-                  ? "bg-muted text-foreground border border-border"
-                  : "bg-primary text-primary-foreground hover:bg-primary/90"
+                ? "bg-muted text-foreground border border-border"
+                : "bg-primary text-primary-foreground hover:bg-primary/90"
                 }`}
             >
               {showAll ? (

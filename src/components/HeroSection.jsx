@@ -2,7 +2,7 @@ import {  MousePointerClick,  Code,   Award, Download,  TrendingUp, Briefcase, M
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
-export const HeroSection = () => {
+export const HeroSection = ({cv}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [currentCodeLine, setCurrentCodeLine] = useState(0);
@@ -54,7 +54,7 @@ export const HeroSection = () => {
   // -------------------
   const handleViewResume = () => {
     // Open resume in new tab
-    window.open('/cv/cv.pdf', '_blank', 'noopener,noreferrer');
+    window.open(cv, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -138,7 +138,7 @@ export const HeroSection = () => {
 
             <motion.div className="mt-6 text-center lg:text-left" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <div className="text-sm text-muted-foreground">
-                 <span className="text-primary font-semibold">Available Immediately</span> for Full-Stack and Frontend roles
+                 <span className="text-primary font-semibold">Available Immediately</span> for  Frontend roles
               </div>
             </motion.div>
           </div>
@@ -154,49 +154,14 @@ export const HeroSection = () => {
                     <div className="w-3 h-3 rounded-full bg-green-400/80"></div>
                   </div>
                   <div className="flex-1 text-center">
-                    <div className="text-sm font-mono font-semibold text-muted-foreground">portfolio.js</div>
+                    <div className="text-sm font-mono font-semibold text-muted-foreground">Abdulrhman Ahmed</div>
                   </div>
                   <div className="w-4 h-4 bg-green-400/20 rounded-full animate-pulse"></div>
                 </div>
 
                 <div className="font-mono text-sm bg-primary/5 rounded-lg border border-primary/10 min-h-[280px] flex">
                   <div className="p-6 w-full">
-                    <div className="grid grid-cols-1 gap-1 h-full content-start">
-                      {codeSnippets.map((line, index) => (
-                        <div 
-                          key={index}
-                          className={`
-                            min-h-[20px] flex items-start
-                            ${index < currentCodeLine ? 'opacity-100' : 'opacity-0'}
-                            ${index === currentCodeLine ? 'opacity-100' : ''}
-                            transition-opacity duration-150 ease-in-out
-                            ${line.includes("import") ? "text-purple-400 font-semibold" : 
-                              line.includes("const") || line.includes("new") ? "text-blue-400 font-semibold" :
-                              line.includes("React") || line.includes("Node.js") || line.includes("TypeScript") ? "text-cyan-400" :
-                              line.includes("FullStackDeveloper") ? "text-emerald-400 font-semibold" :
-                              line.includes("//") ? "text-muted-foreground italic" :
-                              line.includes("await") || line.includes("connect") ? "text-yellow-400" :
-                              line.includes("'") ? "text-amber-400" : 
-                              "text-foreground"}
-                          `}
-                        >
-                          {index < currentCodeLine ? line : ''}
-                          {index === currentCodeLine ? (
-                            <>
-                              {displayedCode}
-                              <motion.span 
-                                animate={{ opacity: [1, 0, 1] }} 
-                                transition={{ duration: 0.8, repeat: Infinity }} 
-                                className="ml-1 text-primary inline-block"
-                              >
-                                ▊
-                              </motion.span>
-                            </>
-                          ) : ''}
-                          {line === '' && '‎'}
-                        </div>
-                      ))}
-                    </div>
+                   <img src="/test.jpeg" className="w-full rounded-md" alt="" />
                   </div>
                 </div>
 
@@ -206,12 +171,12 @@ export const HeroSection = () => {
                 
                 <motion.div className="absolute -top-3 -left-3 bg-background/90 backdrop-blur-sm px-4 py-2 rounded-xl border border-border shadow-lg flex items-center gap-2" initial={{ scale: 0, rotate: -180 }} animate={{ scale: 1, rotate: 0 }} transition={{ delay: 1.5, type: "spring" }}>
                   <Award className="h-4 w-4 text-amber-500" />
-                  <span className="text-sm font-semibold text-foreground">Solutions</span>
+                  <span className="text-sm font-semibold text-foreground">Frontend Developer </span>
                 </motion.div>
                 
                 <motion.div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-background/90 backdrop-blur-sm px-4 py-2 rounded-xl border border-border shadow-lg text-center" initial={{ scale: 0, y: 20 }} animate={{ scale: 1, y: 0 }} transition={{ delay: 2, type: "spring" }}>
-                  <div className="text-xs font-mono text-muted-foreground">Built with</div>
-                  <div className="text-sm font-bold text-foreground">Modern Tech</div>
+                  <div className="text-xs font-mono text-muted-foreground">Age </div>
+                  <div className="text-sm font-bold text-foreground">21 years</div>
                 </motion.div>
               </motion.div>
             </div>

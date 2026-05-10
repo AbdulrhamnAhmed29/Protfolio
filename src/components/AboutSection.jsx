@@ -2,7 +2,7 @@ import { Code, User, Download, Sparkles, Github, Linkedin, Twitter, Mail, Star }
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-export const AboutSection = () => {
+export const AboutSection = ({cv}) => {
   const [activeTab, setActiveTab] = useState('personal');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [counter, setCounter] = useState(0);
@@ -59,8 +59,8 @@ console.log(counter);
   // Programmatic download function  cvs
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/cv/cv.pdf'; // Path to your resume file
-    link.download = 'Abdulrhman-resume.pdf';
+    link.href = cv; // Path to your resume file
+    link.download = 'Abdulrhman Frontend (React).pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
